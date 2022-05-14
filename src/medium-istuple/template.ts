@@ -1,1 +1,1 @@
-type IsTuple<T> = T extends never ? false : T extends [] ? true : T extends readonly [infer P, ...infer R] ? true : false
+type IsTuple<T> = [T] extends [never] ? false : T extends [] ? true : T extends readonly [infer P, ...infer R] ? true : false
